@@ -1,0 +1,65 @@
+* {
+  /* border: 1px red solid; */
+  --Viridian: #3f826d;
+  --GhostWhite: #f7f7ff;
+  --Sunset: #f2d0a4;
+  --EngineeringOrange: #c03221;
+  --PayneGray: #545e75;
+  font-family: "Games", sans-serif;
+  font-size: 11px;
+}
+html {
+  background-color: var(--Viridian);
+}
+
+h1 {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 5rem;
+  color: var(--Sunset);
+}
+button.Menu {
+  display:flex;
+  position: fixed;
+  width: 20rem;
+  height: 7rem;
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 2.5rem;
+  padding-left: 3.5rem;
+  left: 45%;
+  bottom: 60%;
+  z-index: 1;
+  border-radius: 1rem;
+  cursor: pointer;
+  background-color: var(--Sunset);
+}
+#game {
+  padding-left: 3rem;
+}
+
+#game div {
+  border: 1px solid black;
+  width: 15%;
+  height: 200px;
+  margin: 0.5rem 0.5rem 0.5rem 0.5rem; /* Top, right, bottom, left */
+  text-align: center;
+  font-size: 8rem;
+  padding-top: 5rem;
+  padding-bottom: 0rem;
+  display: inline-block;
+
+  /*Flip a card*/
+  background-color: var(--PayneGray);
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  transform-origin: center;
+}
+
+#game .face--front{
+  cursor: pointer;
+}
+#game .face--front.face--back {
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
